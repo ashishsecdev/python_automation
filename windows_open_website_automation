@@ -8,3 +8,5 @@ pyautogui.typewrite('chrome\n', 0.5) # open chrome
 time.sleep(1.0)
 pyautogui.typewrite(g,0.5)
 pyautogui.hotkey('enter') # open the required website.
+
+##simple Script by Ashishsecdev
