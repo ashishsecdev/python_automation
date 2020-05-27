@@ -1,12 +1,19 @@
-import pyautogui
-import time # required to set time to execute next task.
-r = input("Please enter the required website: ") # Enter the name of website to open, it will only work for .com TLD
-g = "www."+r+".com" #
-pyautogui.hotkey('winleft') # use 'win' or 'winleft'
+import pyautogui, time
+r = input("Please enter the required website: ")
+if r.__contains__("www."):
+    r = r
+else:
+    g = "www."+r+".com"
+
+pyautogui.hotkey('winleft')
 time.sleep(1.0)
-pyautogui.typewrite('chrome\n', 0.5) # open chrome
+pyautogui.typewrite('chrome\n', 0.5)
 time.sleep(1.0)
-pyautogui.typewrite(g,0.5)
-pyautogui.hotkey('enter') # open the required website.
+if r == r:
+    pyautogui.typewrite(r, 0.5)
+else:
+    pyautogui.typewrite(g,0.5)
+pyautogui.hotkey('enter')
+time.sleep(1.0)
 
 ##simple Script by Ashishsecdev
