@@ -1,0 +1,9 @@
+import xlrd
+
+workbook = xlrd.open_workbook('first_file.xlsx')
+worksheet = workbook.sheet_by_index(0)
+print(worksheet.nrows) #read worksheets 
+rows = worksheet.nrows
+for i in range(rows):
+    first_col, second_col = worksheet.row_values(i)
+    print(first_col,"  ", second_col)
