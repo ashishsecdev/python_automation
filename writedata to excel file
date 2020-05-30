@@ -1,0 +1,7 @@
+from xlsxwriter import Workbook #optimised import for xlsxwriter
+workbook = Workbook('Hello_workd.xlsx')
+worksheet = workbook.add_worksheet()
+for row in range(20):
+    worksheet.write(i,0,'Dummy Test')
+    worksheet.write(i, 1, i) # row, columns, *args
+workbook.close()
